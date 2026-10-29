@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qiao — Personal Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;1,400;1,600&display=swap');
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #c5d3f0; /* The soft periwinkle blue background from screenshot */
+      color: #111122;
+      margin: 0;
+      padding: 0;
+    }
+
+    .font-serif-italic {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+    }
+
+    /* Soft highlights matching subtitle boxes */
+    .highlight-box-red {
+      background-color: #f7a29e;
+      color: #ffffff;
+      padding: 2px 10px;
+      display: inline-block;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .highlight-box-yellow {
+      background-color: #f7e2a9;
+      color: #333333;
+      padding: 2px 10px;
+      display: inline-block;
+      font-size: 0.85rem;
+    }
+
+    /* Hero main title box */
+    .title-hi-im {
+      background-color: #0d0002;
+      color: #eb4434;
+      padding: 8px 24px;
+      font-weight: 900;
+      font-size: 2.2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .title-layla {
+      background-color: #ffffff;
+      color: #1a1a1a;
+      padding: 8px 24px;
+      font-weight: 400;
+      font-size: 2.2rem;
+      border: 1px solid #d0d0d0;
+    }
+
+    /* Card Hover Animations */
+    .portfolio-card {
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    }
+    .portfolio-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+
+    /* Background image section */
+    .ocean-bg {
+      background: linear-gradient(rgba(0, 30, 60, 0.25), rgba(0, 30, 60, 0.35)), 
+                  url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+    }
+
+    /* Dropdown Arrow Indicator */
+    .nav-arrow {
+      font-size: 0.65rem;
+      margin-left: 3px;
+      display: inline-block;
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- 1. NAVIGATION BAR -->
+  <header class="w-full bg-[#0a1128] text-white py-3 px-6 md:px-12 fixed top-0 left-0 z-50 flex justify-between items-center shadow-md">
+    <div class="flex items-center space-x-2">
+      <a href="#" class="font-bold text-lg text-amber-200 tracking-wider hover:opacity-80 transition-opacity">
+        Layla Yan
+      </a>
+    </div>
+
+    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-200">
+      <a href="#about" class="hover:text-white transition-colors">About</a>
+      <a href="#blogs" class="hover:text-white transition-colors">Blogs</a>
+      
+      <div class="relative group cursor-pointer">
+        <span class="hover:text-white transition-colors">Project <span class="nav-arrow">∨</span></span>
+      </div>
+
+      <div class="relative group cursor-pointer">
+        <span class="hover:text-white transition-colors">Design <span class="nav-arrow">∨</span></span>
+      </div>
+
+      <div class="relative group cursor-pointer">
+        <span class="hover:text-white transition-colors">Brand Campaign <span class="nav-arrow">∨</span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <section id="about" class="pt-28 pb-16 px-4 text-center flex flex-col items-center justify-center">
+    
+    <!-- Title Box -->
+    <div class="flex items-center justify-center space-x-2 my-4 shadow-sm">
+      <div class="title-hi-im">HI, I'M</div>
+      <div class="title-layla">Layla</div>
+    </div>
+
+    <!-- Subtitle Highlights -->
+    <div class="space-y-2 my-4 max-w-xl">
+      <div>
+        <span class="highlight-box-red">Aspiring Advertising and Public Relations professional</span>
+      </div>
+      <div>
+        <span class="highlight-box-yellow">with passion and experience in brand planning and operation</span>
+      </div>
+    </div>
+
+    <!-- About Pill Button -->
+    <div class="my-3">
+      <a href="#philosophy" class="bg-white text-black text-xs px-6 py-1.5 rounded-full shadow hover:bg-slate-100 transition-all font-medium inline-block border border-slate-200">
+        About
+      </a>
+    </div>
+
+    <!-- Centered Photo Frame -->
+    <div class="mt-6 mb-8 max-w-sm w-full px-4">
+      <div class="bg-black p-2 rounded-2xl shadow-xl mx-auto inline-block">
+        <img 
+          src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" 
+          alt="Layla Yan Portrait" 
+          class="w-72 h-80 object-cover rounded-xl"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. OCEAN BACKGROUND & EXPERIENCE SECTION -->
+  <section id="philosophy" class="ocean-bg text-white py-20 px-6 md:px-16 relative">
+    
+    <!-- Section Heading -->
+    <h2 class="text-center text-xl md:text-2xl font-semibold tracking-wider text-white mb-16 uppercase">
+      A PASSION FOR CREATING DIFFERENCES
+    </h2>
+
+    <!-- Text Blocks Overlay Grid -->
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-8 text-xs md:text-sm text-slate-100">
+      
+      <!-- Block 1: UMN -->
+      <div class="space-y-2 backdrop-blur-xs bg-black/10 p-3 rounded">
+        <div class="flex items-center space-x-2 text-slate-300">
+          <span class="text-xs">✱</span>
+          <span class="font-bold tracking-wider text-white text-xs">UNIVERSITY OF MINNESOTA</span>
+        </div>
+        <p class="text-slate-200 leading-relaxed font-light pl-4">
+          Hubbard School – undergraduate | Majoring in Strategic communication: Ad & PR
+        </p>
+      </div>
+
+      <!-- Block 2: From China to US -->
+      <div class="space-y-2 backdrop-blur-xs bg-black/10 p-3 rounded">
+        <div class="flex items-center space-x-2 text-slate-300">
+          <span class="text-xs">✱</span>
+          <span class="font-bold tracking-wider text-white text-xs">FROM CHINA TO US</span>
+        </div>
+        <p class="text-slate-200 leading-relaxed font-light pl-4">
+          Always on the way to pursuing my interests.<br/>
+          Gaining broad horizon, exploring new possibilities, and continuously acquiring essential skills.
+        </p>
+      </div>
+
+      <!-- Block 3: Creativity -->
+      <div class="space-y-2 backdrop-blur-xs bg-black/10 p-3 rounded">
+        <div class="flex items-center space-x-2 text-slate-300">
+          <span class="text-xs">✱</span>
+          <span class="font-bold tracking-wider text-white text-xs">CREATIVITY</span>
+        </div>
+        <p class="text-slate-200 leading-relaxed font-light pl-4">
+          As a person who devoted into stra comm, I have been continuously ways to express content, and turn ideas into something tangible.
+        </p>
+      </div>
+
+      <!-- Block 4: Passion -->
+      <div class="space-y-2 backdrop-blur-xs bg-black/10 p-3 rounded md:col-span-1">
+        <div class="flex items-center space-x-2 text-slate-300">
+          <span class="text-xs">✱</span>
+          <span class="font-bold tracking-wider text-white text-xs">PASSION</span>
+        </div>
+        <p class="text-slate-200 leading-relaxed font-light pl-4">
+          Diving into everything wholeheartedly—whether it’s a new project or a personal interest.
+        </p>
+      </div>
+
+      <!-- Block 5: Columbia University -->
+      <div class="space-y-2 backdrop-blur-xs bg-black/10 p-3 rounded md:col-span-2">
+        <div class="flex items-center space-x-2 text-slate-300">
+          <span class="text-xs">✱</span>
+          <span class="font-bold tracking-wider text-white text-xs">COLUMBIA UNIVERSITY</span>
+        </div>
+        <p class="text-slate-200 leading-relaxed font-light pl-4">
+          Academic journey in graduate school!
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. WORK OVERVIEW SECTION -->
+  <section id="blogs" class="py-16 px-6 md:px-12 max-w-6xl mx-auto">
+    
+    <h2 class="text-2xl md:text-3xl font-serif-italic font-bold text-[#102046] mb-10 tracking-tight">
+      A QUICK OVERVIEW OF MY WORK...
+    </h2>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-start">
+      
+      <!-- Card 1: DESIGN -->
+      <div class="portfolio-card bg-[#eae6df] p-6 rounded-lg shadow-md border border-slate-200 flex flex-col justify-between min-h-[220px]">
+        <div>
+          <h3 class="text-red-600 font-black text-4xl tracking-tight leading-none mb-4">
+            DESIGN
+          </h3>
+          <div class="text-red-700 font-bold text-xs space-y-1 tracking-wider uppercase">
+            <p>PHOTOGRAPHY</p>
+            <p class="text-right pr-4">POSTER</p>
+            <p>INFOGRAPHIC DATA VISUALIZATION</p>
+          </div>
+        </div>
+        <span class="text-[10px] text-slate-500 font-mono mt-4">Layla Yan</span>
+      </div>
+
+      <!-- Card 2: BRAND CAMPAIGN (TV Screen) -->
+      <div class="portfolio-card bg-slate-900 rounded-lg shadow-md overflow-hidden relative border border-slate-300 min-h-[220px] flex flex-col justify-between p-4">
+        <div class="absolute inset-0 bg-cover bg-center opacity-80" style="background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="relative z-10 p-2">
+          <h3 class="text-lime-400 font-black text-2xl tracking-wider uppercase leading-tight drop-shadow-md">
+            BRAND<br/>CAMPAIGN
+          </h3>
+          <p class="text-lime-300 text-[10px] font-mono mt-2 leading-tight">
+            Creative Strategy<br/>& Brand Execution
+          </p>
+        </div>
+        <span class="relative z-10 text-[10px] text-lime-200 font-mono">Brand Showcase</span>
+      </div>
+
+      <!-- Card 3: PR WRITING (Yellow Retro TV) -->
+      <div class="portfolio-card bg-[#f1c40f] p-6 rounded-lg shadow-md text-black flex flex-col justify-center items-center text-center min-h-[220px] border border-amber-300">
+        <div class="bg-black text-cyan-300 p-4 rounded-xl border-4 border-amber-500 shadow-inner w-full max-w-[180px]">
+          <h3 class="font-black text-xl tracking-wider">
+            PR<br/>WRITING
+          </h3>
+        </div>
+        <span class="text-[10px] text-slate-800 font-mono mt-4">ARTICLE COLLECTION</span>
+      </div>
+
+      <!-- Card 4: Video Creation -->
+      <div class="portfolio-card bg-[#e2dec9] p-5 rounded-lg shadow-md border border-slate-300 min-h-[220px] flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif-italic text-2xl font-bold text-slate-800 mb-2">
+            Video Creation
+          </h3>
+          <div class="aspect-video bg-slate-400 rounded overflow-hidden mt-2 border border-slate-300">
+            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80" alt="Video creation preview" class="w-full h-full object-cover grayscale opacity-90"/>
+          </div>
+        </div>
+        <span class="text-[10px] text-slate-600 font-serif-italic">Visual Storytelling</span>
+      </div>
+
+      <!-- Card 5: BLOG -->
+      <div class="portfolio-card bg-white p-4 rounded-lg shadow-md border border-slate-200 min-h-[220px] flex flex-col justify-between">
+        <div>
+          <div class="bg-[#1b52c3] text-white p-3 font-black text-3xl tracking-wider mb-3 rounded-sm">
+            BLOG
+          </div>
+          <div class="aspect-video bg-slate-200 overflow-hidden rounded">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=600&q=80" alt="Blog writing" class="w-full h-full object-cover grayscale"/>
+          </div>
+        </div>
+        <span class="text-[10px] text-slate-500 font-mono mt-2">ESSAYS & THOUGHTS</span>
+      </div>
+
+    </div>
+
+    <!-- Small Asterisk Separator -->
+    <div class="text-center text-slate-600 mt-16 text-lg">
+      *
+    </div>
+  </section>
+
+  <!-- 5. FOOTER / GET IN TOUCH SECTION -->
+  <footer id="contact" class="py-12 px-6 max-w-4xl mx-auto text-left space-y-4">
+    <h2 class="text-xl md:text-2xl font-bold text-[#102046] tracking-tight uppercase">
+      GET IN TOUCH WITH ME!
+    </h2>
+
+    <p class="font-serif-italic text-purple-900 text-lg md:text-xl font-medium">
+      let's make something fun together :>
+    </p>
+
+    <div class="space-y-2 text-sm text-slate-900 pt-2 font-medium">
+      <p>
+        LinkedIn: <a href="https://linkedin.com" target="_blank" class="text-red-600 underline hover:text-red-700">Layla Yan</a>
+      </p>
+      <p>
+        Instagram: <span class="text-slate-800">itslayyyylaa</span>
+      </p>
+      <p>
+        Email: <a href="mailto:qiao.xy@foxmail.com" class="text-slate-800 italic underline">qiao.xy@foxmail.com</a>
+      </p>
+      <p>
+        phone number: <span class="text-slate-800">612-461-1808</span>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
