@@ -1,0 +1,945 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>An Analysis of Systemic Bias | Qiao</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #c5d3f0;
+            color: #111122;
+        }
+
+        .serif {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .section-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            color: #64748b;
+        }
+
+        .case-section {
+            padding-top: 76px;
+            padding-bottom: 76px;
+            border-bottom: 1px solid rgba(16, 32, 70, 0.15);
+        }
+
+        .content-width {
+            max-width: 1050px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .research-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .research-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(10, 17, 40, 0.12);
+        }
+
+        .nav-link:hover {
+            color: #f5d99a;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .concept-panel {
+            min-height: 220px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+<!-- NAVIGATION -->
+<header class="bg-[#0a1128] text-white px-6 md:px-12 py-4 flex justify-between items-center">
+
+    <a href="../index.html"
+       class="font-bold tracking-widest text-amber-200 text-lg">
+        QIAO
+    </a>
+
+    <nav class="flex gap-5 md:gap-8 text-xs md:text-sm text-slate-200">
+
+        <a href="../index.html" class="nav-link">Home</a>
+
+        <a href="../projects.html"
+           class="text-amber-200 border-b border-amber-200 pb-1">
+            Projects
+        </a>
+
+        <a href="../index.html#about" class="nav-link">About</a>
+
+    </nav>
+
+</header>
+
+
+<main class="px-5 md:px-10">
+
+    <div class="content-width">
+
+
+        <!-- HERO -->
+        <section class="pt-16 md:pt-24 pb-16">
+
+            <a href="../projects.html"
+               class="text-xs text-slate-600 hover:text-[#102046]">
+                ← Back to Projects
+            </a>
+
+            <div class="mt-12">
+
+                <p class="section-label">
+                    LINGUISTICS RESEARCH · LANGUAGE & AI
+                </p>
+
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-[#102046] leading-tight mt-5 max-w-4xl">
+                    An Analysis of Systemic Bias in Human and AI-Generated Language
+                </h1>
+
+                <p class="serif italic text-xl md:text-3xl text-[#66547f] mt-6">
+                    Whose language becomes the norm?
+                </p>
+
+                <p class="text-base md:text-lg text-slate-700 leading-relaxed max-w-2xl mt-8">
+                    Examining how linguistic conventions and
+                    AI-generated language reflect existing
+                    social assumptions and patterns of representation.
+                </p>
+
+            </div>
+
+
+            <!-- PROJECT METADATA -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-12 border-t border-slate-400/50 pt-7">
+
+                <div>
+                    <p class="section-label">PROJECT TYPE</p>
+                    <p class="text-sm font-semibold mt-2">Linguistics Research</p>
+                </div>
+
+                <div>
+                    <p class="section-label">RESEARCH APPROACH</p>
+                    <p class="text-sm font-semibold mt-2">Qualitative Analysis</p>
+                </div>
+
+                <div>
+                    <p class="section-label">PARTICIPANTS</p>
+                    <p class="text-sm font-semibold mt-2">8 Participants</p>
+                </div>
+
+                <div>
+                    <p class="section-label">INTERVIEWS</p>
+                    <p class="text-sm font-semibold mt-2">4 Rounds</p>
+                </div>
+
+            </div>
+
+
+            <!-- HERO VISUAL PLACEHOLDER -->
+            <div class="mt-14 bg-[#e5dff0] rounded-2xl p-8 md:p-14 min-h-[300px] flex flex-col justify-center items-center text-center">
+
+                <p class="text-xs tracking-[0.3em] text-purple-800">
+                    HUMAN LANGUAGE × AI-GENERATED LANGUAGE
+                </p>
+
+                <div class="flex flex-col md:flex-row items-center gap-5 md:gap-12 mt-9">
+
+                    <div class="bg-white/80 rounded-xl px-8 py-7 shadow-sm">
+                        <p class="text-xs tracking-widest text-slate-500">
+                            HUMAN
+                        </p>
+                        <h2 class="text-2xl md:text-4xl font-bold text-[#3d315b] mt-2">
+                            Language
+                        </h2>
+                    </div>
+
+                    <span class="text-3xl font-light text-purple-800">×</span>
+
+                    <div class="bg-[#3d315b] rounded-xl px-8 py-7 shadow-sm">
+                        <p class="text-xs tracking-widest text-purple-200">
+                            MACHINE
+                        </p>
+                        <h2 class="text-2xl md:text-4xl font-bold text-white mt-2">
+                            Generated Text
+                        </h2>
+                    </div>
+
+                </div>
+
+                <p class="text-sm text-purple-900 mt-8 max-w-xl leading-relaxed">
+                    Looking beyond the surface of language
+                    to examine the assumptions embedded in expression.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 01 OVERVIEW -->
+        <section class="case-section">
+
+            <p class="section-label">01 · PROJECT OVERVIEW</p>
+
+            <h2 class="text-3xl md:text-4xl font-bold text-[#102046] mt-5 mb-8">
+                Can AI-generated language escape the biases embedded in human language?
+            </h2>
+
+            <div class="max-w-3xl text-slate-700 leading-8 space-y-5">
+
+                <p>
+                    Language is not simply a neutral tool for
+                    communication. Word choices, descriptions,
+                    and recurring expressions can reflect
+                    broader social values and cultural expectations.
+                </p>
+
+                <p>
+                    Some assumptions become embedded in
+                    everyday linguistic conventions. When
+                    particular ways of describing people and
+                    social roles become dominant, they can
+                    gradually be treated as ordinary or universal.
+                </p>
+
+                <p>
+                    The increasing use of AI-generated language
+                    raises another question: when AI systems
+                    generate text based on existing linguistic
+                    patterns, do they also reproduce the
+                    assumptions embedded in human language?
+                </p>
+
+                <p>
+                    This research examined systemic bias in
+                    human and AI-generated language through
+                    qualitative analysis and interviews. It
+                    considered how dominant linguistic norms
+                    may influence social representation,
+                    particularly in relation to gender.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 02 CONTEXT -->
+        <section class="case-section">
+
+            <p class="section-label">02 · CONTEXT & MOTIVATION</p>
+
+            <h2 class="text-3xl md:text-4xl font-bold text-[#102046] mt-5 mb-8">
+                Bias does not always announce itself
+            </h2>
+
+
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+
+                <div class="text-slate-700 leading-8 space-y-5">
+
+                    <p>
+                        Linguistic bias is not always expressed
+                        through openly discriminatory statements.
+                        It can also appear through recurring
+                        descriptions, word choices, and
+                        assumptions about people's roles and identities.
+                    </p>
+
+                    <p>
+                        When certain expressions are repeatedly
+                        used and accepted, the social assumptions
+                        behind them can become less visible.
+                        Alternative perspectives may receive
+                        less attention or representation.
+                    </p>
+
+                    <p>
+                        AI-generated language adds another
+                        dimension to this issue. Text that
+                        appears fluent and neutral may still
+                        reflect conventions and assumptions
+                        present in the language it draws upon.
+                    </p>
+
+                </div>
+
+
+                <div class="bg-[#eee9f4] rounded-xl p-7">
+
+                    <p class="section-label">A QUESTION OF REPRESENTATION</p>
+
+                    <div class="space-y-4 mt-7">
+
+                        <div class="bg-white rounded-lg p-5">
+                            <p class="text-xs tracking-widest text-purple-700">
+                                LINGUISTIC EXPRESSION
+                            </p>
+
+                            <h3 class="text-lg font-bold mt-2 text-[#3d315b]">
+                                What is being said?
+                            </h3>
+
+                            <p class="text-sm text-slate-600 mt-2">
+                                Word choices, descriptions,
+                                and recurring expressions.
+                            </p>
+                        </div>
+
+                        <div class="flex justify-center text-purple-500 text-xl">
+                            ↓
+                        </div>
+
+                        <div class="bg-white rounded-lg p-5">
+                            <p class="text-xs tracking-widest text-purple-700">
+                                SOCIAL ASSUMPTIONS
+                            </p>
+
+                            <h3 class="text-lg font-bold mt-2 text-[#3d315b]">
+                                What is taken for granted?
+                            </h3>
+
+                            <p class="text-sm text-slate-600 mt-2">
+                                Expectations and social norms
+                                reflected in language.
+                            </p>
+                        </div>
+
+                        <div class="flex justify-center text-purple-500 text-xl">
+                            ↓
+                        </div>
+
+                        <div class="bg-[#3d315b] rounded-lg p-5 text-white">
+                            <p class="text-xs tracking-widest text-purple-200">
+                                REPRESENTATION
+                            </p>
+
+                            <h3 class="text-lg font-bold mt-2">
+                                Whose perspective is visible?
+                            </h3>
+
+                            <p class="text-sm text-purple-100 mt-2">
+                                Which experiences are represented,
+                                normalized, or overlooked?
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <p class="text-xs text-slate-500 mt-4 leading-relaxed">
+                        Conceptual framework for presenting the
+                        research motivation, not a measured model.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 03 RESEARCH QUESTIONS -->
+        <section class="case-section">
+
+            <p class="section-label">03 · RESEARCH QUESTIONS</p>
+
+            <h2 class="text-3xl md:text-4xl font-bold text-[#102046] mt-5 mb-10">
+                Looking beyond linguistic surface patterns
+            </h2>
+
+
+            <div class="grid md:grid-cols-3 gap-5">
+
+
+                <div class="research-card bg-white/80 p-6 rounded-xl">
+
+                    <p class="text-4xl serif text-[#8b79a7]">01</p>
+
+                    <h3 class="text-lg font-bold mt-4 text-[#3d315b]">
+                        Human Language
+                    </h3>
+
+                    <p class="text-sm text-slate-600 leading-relaxed mt-3">
+                        How are social assumptions reflected
+                        in human language and everyday expressions?
+                    </p>
+
+                </div>
+
+
+                <div class="research-card bg-white/80 p-6 rounded-xl">
+
+                    <p class="text-4xl serif text-[#8b79a7]">02</p>
+
+                    <h3 class="text-lg font-bold mt-4 text-[#3d315b]">
+                        AI-Generated Language
+                    </h3>
+
+                    <p class="text-sm text-slate-600 leading-relaxed mt-3">
+                        How does AI-generated language reflect
+                        or reproduce patterns associated with
+                        existing social biases?
+                    </p>
+
+                </div>
+
+
+                <div class="research-card bg-white/80 p-6 rounded-xl">
+
+                    <p class="text-4xl serif text-[#8b79a7]">03</p>
+
+                    <h3 class="text-lg font-bold mt-4 text-[#3d315b]">
+                        Social Representation
+                    </h3>
+
+                    <p class="text-sm text-slate-600 leading-relaxed mt-3">
+                        How do dominant linguistic norms
+                        influence which perspectives become
+                        represented or overlooked?
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 04 RESEARCH DESIGN -->
+        <section class="case-section">
+
+            <p class="section-label">04 · RESEARCH DESIGN & METHODOLOGY</p>
+
+            <h2 class="text-3xl md:text-4xl font-bold text-[#102046] mt-5 mb-6">
+                A qualitative approach to language and bias
+            </h2>
+
+            <p class="text-slate-700 leading-8 max-w-3xl">
+                The research combined qualitative analysis
+                with four rounds of interviews involving
+                eight participants. It examined human and
+                AI-generated language in relation to
+                linguistic patterns and social assumptions.
+            </p>
+
+
+            <!-- RESEARCH OVERVIEW -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
+
+                <div class="bg-[#eee9f4] rounded-xl p-6">
+
+                    <p class="text-4xl font-bold text-[#3d315b]">08</p>
+
+                    <h3 class="font-bold mt-3 text-[#3d315b]">
+                        Participants
+                    </h3>
+
+                    <p class="text-sm text-slate-600 mt-2">
+                        Interview participants involved
+                        in the qualitative research.
+                    </p>
+
+                </div>
+
+
+                <div class="bg-[#eee9f4] rounded-xl p-6">
+
+                    <p class="text-4xl font-bold text-[#3d315b]">04</p>
+
+                    <h3 class="font-bold mt-3 text-[#3d315b]">
+                        Interview Rounds
+                    </h3>
+
+                    <p class="text-sm text-slate-600 mt-2">
+                        Four rounds of interviews
+                        conducted during the research.
+                    </p>
+
+                </div>
+
+
+                <div class="bg-[#eee9f4] rounded-xl p-6">
+
+                    <p class="text-4xl font-bold text-[#3d315b]">
+                        Qual.
+                    </p>
+
+                    <h3 class="font-bold mt-3 text-[#3d315b]">
+                        Research Approach
+                    </h3>
+
+                    <p class="text-sm text-slate-600 mt-2">
+                        Qualitative examination of
+                        language and social assumptions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- TWO RESEARCH COMPONENTS -->
+            <div class="grid md:grid-cols-2 gap-6 mt-8">
+
+                <div class="bg-white/80 rounded-xl p-7">
+
+                    <p class="section-label">01 · LANGUAGE ANALYSIS</p>
+
+                    <h3 class="text-xl font-bold text-[#3d315b] mt-4">
+                        Examining linguistic patterns
+                    </h3>
+
+                    <p class="text-sm text-slate-600 leading-7 mt-4">
+                        Qualitative analysis of human and
+                        AI-generated language, focusing on
+                        how linguistic choices may reflect
+                        broader social assumptions.
+                    </p>
+
+                </div>
+
+
+                <div class="bg-white/80 rounded-xl p-7">
+
+                    <p class="section-label">02 · INTERVIEWS</p>
+
+                    <h3 class="text-xl font-bold text-[#3d315b] mt-4">
+                        Exploring perspectives
+                    </h3>
+
+                    <p class="text-sm text-slate-600 leading-7 mt-4">
+                        Four rounds of interviews with
+                        eight participants to explore
+                        perspectives related to language
+                        and systemic bias.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="mt-8 bg-[#e5dff0] rounded-xl p-7">
+
+                <p class="text-xs tracking-widest text-purple-800 font-bold">
+                    RESEARCH PROCESS
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-5 text-center">
+
+                    <div class="bg-white/80 rounded-lg p-5">
+                        <p class="font-bold text-[#3d315b]">
+                            Language
+                        </p>
+                        <p class="text-xs text-slate-600 mt-2">
+                            Examine expressions and patterns
+                        </p>
+                    </div>
+
+                    <div class="bg-white/80 rounded-lg p-5">
+                        <p class="font-bold text-[#3d315b]">
+                            Interviews
+                        </p>
+                        <p class="text-xs text-slate-600 mt-2">
+                            Gather participant perspectives
+                        </p>
+                    </div>
+
+                    <div class="bg-white/80 rounded-lg p-5">
+                        <p class="font-bold text-[#3d315b]">
+                            Interpretation
+                        </p>
+                        <p class="text-xs text-slate-600 mt-2">
+                            Consider social implications
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 05 ANALYTICAL FRAMEWORK -->
+        <section class="case-section">
+
+            <p class="section-label">05 · ANALYTICAL FRAMEWORK</p>
+
+            <h2 class="text-3xl md:text-4xl font-bold text-[#102046] mt-5 mb-6">
+                From linguistic choices to social assumptions
+            </h2>
+
+            <p class="text-slate-700 leading-8 max-w-3xl">
+                The research considered bias beyond
+                individual words or explicitly discriminatory
+                statements. It examined how language patterns
+                can reflect particular ways of understanding
+                people, identities, and social roles.
+            </p>
+
+
+            <div class="mt-10 space-y-4">
+
+                <div class="bg-white/80 rounded-xl p-7">
+
+                    <p class="section-label">LAYER 01</p>
+
+                    <h3 class="text-xl font-bold text-[#3d315b] mt-3">
+                        Linguistic Choices
+                    </h3>
+
+                    <p class="text-sm text-slate-600 mt-3 leading-7">
+                        Word choices, descriptions, labels,
+                        and recurring expressions.
+                    </p>
+
+                </div>
+
+
+                <div class="flex justify-center text-2xl text-purple-500">
+                    ↓
+                </div>
+
+
+                <div class="bg-white/80 rounded-xl p-7">
+
+                    <p class="section-label">LAYER 02</p>
+
+                    <h3 class="text-xl font-bold text-[#3d315b] mt-3">
+                        Social Assumptions
+                    </h3>
+
+                    <p class="text-sm text-slate-600 mt-3 leading-7">
+                        Gender-related expectations and
+                        broader social assumptions reflected
+                        through linguistic conventions.
+                    </p>
+
+                </div>
+
+
+                <div class="flex justify-center text-2xl text-purple-500">
+                    ↓
+                </div>
+
+
+                <div class="bg-[#3d315b] rounded-xl p-7 text-white">
+
+                    <p class="text-xs tracking-widest text-purple-200">
+                        LAYER 03
+                    </p>
+
+                    <h3 class="text-xl font-bold mt-3">
+                        Representation & Normalization
+                    </h3>
+
+                    <p class="text-sm text-purple-100 mt-3 leading-7">
+                        Considering which perspectives become
+                        familiar, visible, or treated as normative.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <p class="text-xs text-slate-500 mt-5 leading-relaxed">
+                This diagram summarizes the conceptual
+                direction of the research. Specific linguistic
+                examples and coding categories will be added
+                from the original research materials.
+            </p>
+
+        </section>
+
+
+
+        <!-- 06 KEY FINDINGS -->
+        <section class="case-section">
+
+            <p class="section-label">06 · KEY FINDINGS</p>
+
+            <h2 class="text-3xl md:text-4xl font-bold text-[#102046] mt-5 mb-10">
+                The assumptions behind seemingly ordinary language
+            </h2>
+
+
+            <div class="space-y-6">
+
+
+                <div class="bg-white/80 rounded-xl p-7 md:p-9">
+
+                    <div class="flex gap-5">
+
+                        <span class="text-4xl serif text-[#8b79a7] shrink-0">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h3 class="text-xl md:text-2xl font-bold text-[#3d315b]">
+                                Bias can be embedded in dominant linguistic norms
+                            </h3>
+
+                            <p class="text-slate-600 leading-8 mt-4">
+                                Bias is not limited to explicit
+                                discriminatory wording. It can
+                                also be reflected in recurring
+                                linguistic conventions that
+                                carry established social expectations.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bg-white/80 rounded-xl p-7 md:p-9">
+
+                    <div class="flex gap-5">
+
+                        <span class="text-4xl serif text-[#8b79a7] shrink-0">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h3 class="text-xl md:text-2xl font-bold text-[#3d315b]">
+                                AI-generated language can reproduce existing biases
+                            </h3>
+
+                            <p class="text-slate-600 leading-8 mt-4">
+                                AI-generated language may reproduce
+                                patterns associated with existing
+                                social and gender biases reflected
+                                in dominant linguistic norms.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bg-[#e5dff0] rounded-xl p-7 md:p-9">
+
+                    <div class="flex gap-5">
+
+                        <span class="text-4xl serif text-[#8b79a7] shrink-0">
+                            03
+                        </span>
+
+                        <div>
+
+                            <h3 class="text-xl md:text-2xl font-bold text-[#3d315b]">
+                                Linguistic neutrality requires attention to representation
+                            </h3>
+
+                            <p class="text-[#5b5171] leading-8 mt-4">
+                                The research raised questions
+                                about which perspectives are
+                                represented through generated
+                                language, and whose experiences
+                                may become less visible when
+                                dominant conventions are treated
+                                as neutral.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 07 DISCUSSION -->
+        <section class="case-section">
+
+            <p class="section-label">07 · DISCUSSION & IMPLICATIONS</p>
+
+            <h2 class="text-3xl md:text-4xl font-bold text-[#102046] mt-5 mb-8">
+                Whose language becomes the norm?
+            </h2>
+
+            <div class="max-w-3xl text-slate-700 leading-8 space-y-5">
+
+                <p>
+                    This research shifted my attention
+                    from individual biased expressions
+                    to the broader linguistic conventions
+                    that make certain assumptions appear natural.
+                </p>
+
+                <p>
+                    When AI-generated language reflects
+                    dominant ways of describing people
+                    and society, it may contribute to
+                    the continued normalization of those
+                    perspectives.
+                </p>
+
+                <p>
+                    The issue is therefore not simply
+                    whether AI can produce biased statements.
+                    It is also important to consider how
+                    generated language participates in
+                    shaping representation and whose
+                    experiences are reflected in its outputs.
+                </p>
+
+                <p>
+                    This led me to consider language
+                    technologies not merely as communication
+                    tools, but as systems whose outputs
+                    can carry social and cultural assumptions.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 08 REFLECTION -->
+        <section class="case-section">
+
+            <p class="section-label">08 · REFLECTION</p>
+
+            <h2 class="serif text-3xl md:text-5xl italic text-[#3d315b] leading-tight mt-5 max-w-3xl">
+                Fluency does not necessarily make language neutral.
+            </h2>
+
+            <div class="max-w-3xl mt-9 text-slate-700 leading-8 space-y-5">
+
+                <p>
+                    Through this research, I became more
+                    attentive to the relationship between
+                    language and the social structures
+                    behind it.
+                </p>
+
+                <p>
+                    I learned to look beyond the surface
+                    meaning of an expression and consider
+                    the assumptions, perspectives, and
+                    social expectations embedded in its use.
+                </p>
+
+                <p>
+                    It also changed how I think about
+                    AI-generated language. Understanding
+                    the social implications of language
+                    technologies requires examining
+                    not only what they say, but also
+                    the norms they may reproduce.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SCOPE & LIMITATIONS -->
+        <section class="py-12">
+
+            <div class="bg-[#e7eaf2] rounded-xl p-7 md:p-9">
+
+                <p class="section-label">
+                    RESEARCH SCOPE & LIMITATIONS
+                </p>
+
+                <p class="text-sm text-slate-600 leading-7 mt-5 max-w-3xl">
+                    This project used a qualitative research
+                    approach involving eight participants
+                    across four interview rounds. Its findings
+                    should be understood within the scope
+                    of the materials and participants examined.
+                    The research does not establish the
+                    prevalence of bias across all AI systems
+                    or generated language.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- BOTTOM NAVIGATION -->
+        <section class="py-12 border-t border-slate-400/50 flex justify-between items-center gap-5">
+
+            <a href="grocery-self-pickup-service.html"
+               class="text-sm font-semibold text-[#102046] hover:text-purple-700">
+                ← Previous Project
+            </a>
+
+            <a href="interpersonal-bias-and-hurt-in-family-communication.html"
+               class="text-sm font-semibold text-[#102046] hover:text-purple-700 text-right">
+                Next Project →
+            </a>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- FOOTER -->
+<footer class="bg-[#0a1128] text-slate-300 py-8 px-6 md:px-12">
+
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-3">
+
+        <p class="text-xs">
+            © 2026 Qiao · Personal Portfolio
+        </p>
+
+        <a href="../index.html"
+           class="text-xs hover:text-amber-200">
+            Back to Home ↑
+        </a>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
