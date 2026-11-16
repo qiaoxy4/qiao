@@ -70,9 +70,18 @@
     /* Background image section */
     .ocean-bg {
   background: linear-gradient(rgba(0, 30, 60, 0.40), rgba(0, 30, 60, 0.45)),
-              url('assets/images/costal.jpg') center/cover no-repeat;
+              url('assets/images/coastal.jpg') center/cover no-repeat;
 }
-
+/* Profile background image */
+.profile-hero {
+  background:
+    linear-gradient(
+      rgba(20, 38, 29, 0.30),
+      rgba(20, 38, 29, 0.38)
+    ),
+    url('assets/images/tree.jpg') center center / cover no-repeat;
+}
+    
     /* Dropdown Arrow Indicator */
     .nav-arrow {
       font-size: 0.65rem;
@@ -111,43 +120,50 @@
     </nav>
   </header>
 
-  <!-- 2. HERO SECTION -->
-  <section id="about" class="pt-28 pb-16 px-4 text-center flex flex-col items-center justify-center">
-    
-    <!-- Title Box -->
-    <div class="flex items-center justify-center space-x-2 my-4 shadow-sm">
-      <div class="title-hi-im">HI, I'M</div>
-      <div class="title-layla">Layla</div>
-    </div>
+ 
+<!-- 2. HERO SECTION -->
+<section id="about" class="profile-hero pt-28 pb-16 px-4 text-center flex flex-col items-center justify-center">
 
-    <!-- Subtitle Highlights -->
-    <div class="space-y-2 my-4 max-w-xl">
-      <div>
-        <span class="highlight-box-red">Aspiring Advertising and Public Relations professional</span>
-      </div>
-      <div>
-        <span class="highlight-box-yellow">with passion and experience in brand planning and operation</span>
-      </div>
-    </div>
+  <!-- Title Box -->
+  <div class="flex items-center justify-center space-x-2 my-4 shadow-sm">
+    <div class="title-hi-im">HI, I'M</div>
+    <div class="title-Qiao">Qiao</div>
+  </div>
 
-    <!-- About Pill Button -->
-    <div class="my-3">
-      <a href="#philosophy" class="bg-white text-black text-xs px-6 py-1.5 rounded-full shadow hover:bg-slate-100 transition-all font-medium inline-block border border-slate-200">
-        About
-      </a>
+  <!-- Subtitle Highlights -->
+  <div class="space-y-2 my-4 max-w-xl">
+    <div>
+      <span class="highlight-box-sage">
+        Exploring Human-Computer Interaction
+      </span>
     </div>
+    <div>
+      <span class="highlight-box-cream">
+        with a background in language, research, and product operations
+      </span>
+    </div>
+  </div>
 
-    <!-- Centered Photo Frame -->
-    <div class="mt-6 mb-8 max-w-sm w-full px-4">
-      <div class="bg-black p-2 rounded-2xl shadow-xl mx-auto inline-block">
-        <img 
-          src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" 
-          alt="Layla Yan Portrait" 
-          class="w-72 h-80 object-cover rounded-xl"
-        />
-      </div>
+  <!-- About Pill Button -->
+  <div class="my-3">
+    <a href="#philosophy" class="profile-about">
+      About
+    </a>
+  </div>
+
+  <!-- Centered Photo Frame -->
+  <div class="mt-6 mb-8 max-w-sm w-full px-4">
+    <div class="profile-photo-frame mx-auto inline-block">
+      <img
+        src="assets/images/profile.jpg"
+        alt="Profile Portrait"
+        class="w-72 h-80 object-cover rounded-xl"
+      />
     </div>
-  </section>
+  </div>
+
+</section>
+
 
   
   <!-- 3. ABOUT / PERSONAL INTRODUCTION SECTION -->
