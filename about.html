@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Qiao</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -19,10 +20,52 @@
       line-height: 1.65;
     }
 
+    /* NAVIGATION BAR */
+    .site-header {
+      width: 100%;
+      height: 80px;
+      padding: 0 5%;
+      background: #0a1128;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .site-logo {
+      color: #ffe28a;
+      font-size: 27px;
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+    }
+
+    .site-nav a {
+      color: #e5e7eb;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .site-nav a:hover {
+      color: #ffe28a;
+    }
+
+    /* MAIN CONTENT */
     .about-container {
       width: min(1100px, 90%);
       margin: 0 auto;
-      padding: 65px 0 90px;
+      padding: 115px 0 90px;
     }
 
     .page-header {
@@ -70,6 +113,7 @@
       text-transform: uppercase;
     }
 
+    /* TIMELINE */
     .timeline {
       position: relative;
       margin-left: 30px;
@@ -151,6 +195,7 @@
       color: #d52d25;
     }
 
+    /* PROJECTS */
     .project-card {
       background: #eeeeee;
       padding: 25px 30px;
@@ -175,6 +220,7 @@
       color: #333;
     }
 
+    /* SKILLS */
     .skills-card {
       background: #eeeeee;
       padding: 28px 30px;
@@ -200,6 +246,7 @@
       color: #333;
     }
 
+    /* BACK TO HOME */
     .back-link {
       display: inline-block;
       margin-top: 25px;
@@ -213,10 +260,28 @@
       color: #d52d25;
     }
 
+    /* MOBILE */
     @media (max-width: 650px) {
+      .site-header {
+        height: 70px;
+        padding: 0 4%;
+      }
+
+      .site-logo {
+        font-size: 21px;
+      }
+
+      .site-nav {
+        gap: 15px;
+      }
+
+      .site-nav a {
+        font-size: 13px;
+      }
+
       .about-container {
         width: 92%;
-        padding-top: 40px;
+        padding-top: 100px;
       }
 
       .page-header h1 {
@@ -250,43 +315,12 @@
         white-space: normal;
       }
     }
-  .site-header {
-  width: 100%;
-  height: 90px;
-  padding: 0 4%;
-  background: #A9C9C8;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-
-.site-logo {
-  color: #29483D;
-  font-size: 28px;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-.site-nav {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.site-nav a {
-  color: #29483D;
-  font-size: 17px;
-  font-weight: 600;
-  text-decoration: none;
-}</style>
+  </style>
 </head>
 
 <body>
- <!-- NAVIGATION BAR -->
+
+  <!-- NAVIGATION BAR -->
   <header class="site-header">
     <a href="index.html" class="site-logo">QIAO</a>
 
@@ -296,6 +330,7 @@
       <a href="index.html#contact">Contact</a>
     </nav>
   </header>
+
   <main class="about-container">
 
     <!-- PAGE INTRO -->
@@ -312,13 +347,11 @@
       </div>
     </header>
 
-
     <!-- EDUCATION -->
     <section class="resume-section">
       <h2 class="section-title">Education</h2>
 
       <div class="timeline">
-
         <article class="timeline-item">
           <div class="item-top">
             <h3 class="item-title">
@@ -340,10 +373,8 @@
             Essentials of Management.
           </p>
         </article>
-
       </div>
     </section>
-
 
     <!-- PROFESSIONAL EXPERIENCE -->
     <section class="resume-section">
@@ -409,7 +440,6 @@
           </div>
         </article>
 
-
         <!-- AIMIX -->
         <article class="timeline-item">
           <div class="item-top">
@@ -444,7 +474,6 @@
       </div>
     </section>
 
-
     <!-- RESEARCH EXPERIENCE -->
     <section class="resume-section">
       <h2 class="section-title">Research Experience</h2>
@@ -453,9 +482,7 @@
 
         <article class="timeline-item">
           <div class="item-top">
-            <h3 class="item-title">
-              Undergraduate Thesis
-            </h3>
+            <h3 class="item-title">Undergraduate Thesis</h3>
             <span class="item-date">October 2023 – June 2024</span>
           </div>
 
@@ -473,12 +500,9 @@
           </p>
         </article>
 
-
         <article class="timeline-item">
           <div class="item-top">
-            <h3 class="item-title">
-              Linguistics Research Project
-            </h3>
+            <h3 class="item-title">Linguistics Research Project</h3>
           </div>
 
           <p class="item-subtitle">
@@ -495,12 +519,9 @@
           </p>
         </article>
 
-
         <article class="timeline-item">
           <div class="item-top">
-            <h3 class="item-title">
-              Linguistics Research Project
-            </h3>
+            <h3 class="item-title">Linguistics Research Project</h3>
           </div>
 
           <p class="item-subtitle">
@@ -519,7 +540,6 @@
       </div>
     </section>
 
-
     <!-- SELECTED PROJECTS -->
     <section class="resume-section">
       <h2 class="section-title">Selected Projects</h2>
@@ -530,9 +550,7 @@
           <span class="accent">| 1st Place in Class</span>
         </h3>
 
-        <p class="project-meta">
-          Entrepreneurship Project
-        </p>
+        <p class="project-meta">Entrepreneurship Project</p>
 
         <p>
           Conducted market and user research to understand
@@ -547,16 +565,13 @@
           to flexible pickup arrangements.
         </p>
       </article>
-
     </section>
-
 
     <!-- LEADERSHIP EXPERIENCE -->
     <section class="resume-section">
       <h2 class="section-title">Leadership Experience</h2>
 
       <div class="timeline">
-
         <article class="timeline-item">
           <div class="item-top">
             <h3 class="item-title">
@@ -564,9 +579,7 @@
             </h3>
           </div>
 
-          <p class="item-subtitle">
-            Editorial Team Member
-          </p>
+          <p class="item-subtitle">Editorial Team Member</p>
 
           <p class="item-description">
             Covered university events and academic activities,
@@ -575,10 +588,8 @@
             and official social media channels.
           </p>
         </article>
-
       </div>
     </section>
-
 
     <!-- SKILLS -->
     <section class="resume-section">
@@ -613,7 +624,6 @@
 
       </div>
     </section>
-
 
     <!-- BACK TO HOME -->
     <a href="index.html" class="back-link">
