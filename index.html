@@ -1,16 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Qiao — Personal Portfolio</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;1,400;1,600&display=swap');
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #c5d3f0; /* The soft periwinkle blue background from screenshot */
+      background-color: #c5d3f0;
       color: #111122;
       margin: 0;
       padding: 0;
@@ -21,227 +28,321 @@
       font-style: italic;
     }
 
-    /* Soft highlights matching subtitle boxes */
-    .highlight-box-red {
-      background-color: #f7a29e;
+    /* NAVIGATION */
+    .site-nav {
+      font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .site-logo {
       color: #ffffff;
-      padding: 2px 10px;
+    }
+
+    /* HERO SECTION: TREE BACKGROUND */
+    .profile-hero {
+      position: relative;
+      background:
+        linear-gradient(
+          rgba(10, 20, 40, 0.62),
+          rgba(10, 20, 40, 0.62)
+        ),
+        url('assets/images/tree.jpeg') center center / cover no-repeat;
+      padding: 150px 24px 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* HERO TEXT CARD */
+    .hero-card {
+      position: relative;
+      z-index: 2;
+      width: min(760px, 92%);
+      padding: 48px 55px 105px;
+      background: rgba(15, 25, 50, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    /* MAIN TITLE */
+    .hero-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: #ffffff;
+      font-size: clamp(2.8rem, 6vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.045em;
+      margin-bottom: 25px;
+    }
+
+    .hero-title .name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 600;
+      font-style: italic;
+      color: #ffffff;
+      letter-spacing: -0.03em;
+    }
+
+    /* HERO DESCRIPTION */
+    .hero-description {
+      max-width: 560px;
+      margin: 0 auto;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.8;
+    }
+
+    /* ABOUT BUTTON */
+    .profile-about {
       display: inline-block;
-      font-size: 0.95rem;
-      font-weight: 500;
+      margin-top: 30px;
+      padding: 12px 34px;
+      background: #ffffff;
+      color: #102046;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: all 0.3s ease;
     }
 
-    .highlight-box-yellow {
-      background-color: #f7e2a9;
-      color: #333333;
-      padding: 2px 10px;
-      display: inline-block;
-      font-size: 0.85rem;
+    .profile-about:hover {
+      background: #ffe28a;
+      color: #102046;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
-    /* Hero main title box */
-    .title-hi-im {
-      background-color: #0d0002;
-      color: #eb4434;
-      padding: 8px 24px;
-      font-weight: 900;
-      font-size: 2.2rem;
-      letter-spacing: -0.02em;
+    /* PROFILE PHOTO */
+    .profile-photo-frame {
+      position: relative;
+      z-index: 3;
+      margin-top: -75px;
+      width: min(340px, 80%);
+      padding: 0;
+      border: 6px solid #ffffff;
+      border-radius: 12px;
+      background: #ffffff;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
     }
 
-    .title-layla {
-      background-color: #ffffff;
-      color: #1a1a1a;
-      padding: 8px 24px;
-      font-weight: 400;
-      font-size: 2.2rem;
-      border: 1px solid #d0d0d0;
+    .profile-photo-frame img {
+      display: block;
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      border-radius: 5px;
     }
 
-    /* Card Hover Animations */
-    .portfolio-card {
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
-    }
-    .portfolio-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-    }
-
-    /* Background image section */
+    /* SECOND SECTION BACKGROUND */
     .shadow-bg {
-  background: linear-gradient(rgba(0, 30, 60, 0.40), rgba(0, 30, 60, 0.45)),
-              url('assets/images/shadow2.jpeg') center/cover no-repeat;
-}
-/* Profile background image */
-.profile-hero {
-  background:
-    linear-gradient(
-      rgba(20, 38, 29, 0.30),
-      rgba(20, 38, 29, 0.38)
-    ),
-    url('assets/images/tree.jpeg') center center / cover no-repeat;
-}
-    
-    /* Dropdown Arrow Indicator */
-    .nav-arrow {
-      font-size: 0.65rem;
-      margin-left: 3px;
-      display: inline-block;
-      transform: translateY(-1px);
+      background:
+        linear-gradient(
+          rgba(0, 30, 60, 0.40),
+          rgba(0, 30, 60, 0.45)
+        ),
+        url('assets/images/shadow2.jpeg') center / cover no-repeat;
     }
- /* I CARE ABOUT PEOPLE section */
 
-.care-section {
-  padding: 100px 7%;
-  background-color: #c5d3f0;
-}
+    /* I CARE ABOUT PEOPLE SECTION */
+    .care-section {
+      padding: 100px 7%;
+      background-color: #c5d3f0;
+    }
 
-.care-heading {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  font-weight: 600;
-  letter-spacing: -0.04em;
-  color: #102046;
-  margin-bottom: 65px;
-}
+    .care-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      color: #102046;
+      margin-bottom: 65px;
+    }
 
-.care-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid rgba(16, 32, 70, 0.35);
-}
+    .care-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid rgba(16, 32, 70, 0.35);
+    }
 
-.care-item {
-  padding: 28px 22px 32px 0;
-  border-bottom: 1px solid rgba(16, 32, 70, 0.35);
-  text-decoration: none;
-  color: #102046;
-  transition: opacity 0.3s ease;
-}
+    .care-item {
+      padding: 28px 22px 32px 0;
+      border-bottom: 1px solid rgba(16, 32, 70, 0.35);
+      text-decoration: none;
+      color: #102046;
+      transition: opacity 0.3s ease;
+    }
 
-.care-item:not(:last-child) {
-  border-right: 1px solid rgba(16, 32, 70, 0.25);
-}
+    .care-item:not(:last-child) {
+      border-right: 1px solid rgba(16, 32, 70, 0.25);
+    }
 
-.care-item:hover {
-  opacity: 0.55;
-}
+    .care-item:hover {
+      opacity: 0.55;
+    }
 
-.care-number {
-  display: block;
-  font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  color: #647493;
-  margin-bottom: 30px;
-}
+    .care-number {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      color: #647493;
+      margin-bottom: 30px;
+    }
 
-.care-name {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(1rem, 1.8vw, 1.5rem);
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  line-height: 1.3;
-}
+    .care-name {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1rem, 1.8vw, 1.5rem);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.3;
+    }
 
-@media (max-width: 768px) {
-  .care-grid {
-    grid-template-columns: 1fr;
-  }
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .profile-hero {
+        padding: 115px 16px 75px;
+      }
 
-  .care-item {
-    border-right: none !important;
-    padding: 22px 0;
-  }
+      .hero-card {
+        width: 96%;
+        padding: 38px 22px 95px;
+      }
 
-  .care-number {
-    margin-bottom: 12px;
-  }
-} </style>
+      .hero-title {
+        font-size: clamp(2.4rem, 9vw, 3.2rem);
+        gap: 8px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .profile-photo-frame {
+        margin-top: -65px;
+        width: min(300px, 82%);
+      }
+
+      .profile-photo-frame img {
+        height: 340px;
+      }
+
+      .care-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .care-item {
+        border-right: none !important;
+        padding: 22px 0;
+      }
+
+      .care-number {
+        margin-bottom: 12px;
+      }
+
+      .care-heading {
+        margin-bottom: 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-card {
+        padding: 32px 18px 85px;
+      }
+
+      .hero-title {
+        font-size: 2.35rem;
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .profile-photo-frame img {
+        height: 300px;
+      }
+    }
+  </style>
 </head>
+
 <body class="min-h-screen">
 
   <!-- 1. NAVIGATION BAR -->
   <header class="w-full bg-[#0a1128] text-white py-3 px-6 md:px-12 fixed top-0 left-0 z-50 flex justify-between items-center shadow-md">
-    <div class="flex items-center space-x-2">
-      <a href="index.html" class="font-bold text-lg text-amber-200 tracking-wider hover:opacity-80 transition-opacity">
-        QIAO
+
+    <a href="index.html"
+       class="site-logo font-bold text-lg tracking-wider hover:opacity-80 transition-opacity">
+      QIAO
+    </a>
+
+    <nav class="site-nav hidden md:flex items-center space-x-8 text-sm font-medium text-white">
+      <a href="projects.html" class="hover:text-amber-200 transition-colors">
+        Projects
       </a>
-    </div>
 
-   
-<nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-200">
+      <a href="about.html" class="hover:text-amber-200 transition-colors">
+        About
+      </a>
 
-  <a href="projects.html" class="hover:text-white transition-colors">
-    Projects
-  </a>
-
-  <a href="about.html" class="hover:text-white transition-colors">
-    About
-  </a>
-
-  <a href="#contact" class="hover:text-white transition-colors">
-    Contact
-  </a>
-
-</nav>
+      <a href="#contact" class="hover:text-amber-200 transition-colors">
+        Contact
+      </a>
+    </nav>
 
   </header>
 
- 
-<!-- 2. HERO SECTION -->
-<section id="about" class="profile-hero pt-28 pb-16 px-4 text-center flex flex-col items-center justify-center">
 
-  <!-- Title Box -->
-  <div class="flex items-center justify-center space-x-2 my-4 shadow-sm">
-    <div class="title-hi-im">HI, I'M</div>
-    <div class="title-Qiao">Qiao</div>
-  </div>
+  <!-- 2. HERO SECTION -->
+  <section id="about" class="profile-hero">
 
-  <!-- Subtitle Highlights -->
-  <div class="space-y-2 my-4 max-w-xl">
-    <div>
-      <span class="highlight-box-sage">
-        Exploring Human-Computer Interaction
-      </span>
+    <!-- Text Card -->
+    <div class="hero-card">
+
+      <h1 class="hero-title">
+        <span>HI, I'M</span>
+        <span class="name">Qiao</span>
+      </h1>
+
+      <p class="hero-description">
+        Exploring Human-Computer Interaction, with a background in language, research, and product operations.
+      </p>
+
+      <a href="about.html" class="profile-about">
+        About
+      </a>
+
     </div>
-    <div>
-      <span class="highlight-box-cream">
-        with a background in language, research, and product operations
-      </span>
-    </div>
-  </div>
 
-  <!-- About Pill Button -->
-  <div class="my-3">
-   <a href="about.html" class="profile-about">
-      About
-    </a>
-  </div>
-
-  <!-- Centered Photo Frame -->
-  <div class="mt-6 mb-8 max-w-sm w-full px-4">
-    <div class="profile-photo-frame mx-auto inline-block">
+    <!-- Overlapping Profile Photo -->
+    <div class="profile-photo-frame">
       <img
         src="assets/images/profile.jpeg"
         alt="Profile Portrait"
-        class="w-72 h-80 object-cover rounded-xl"
       />
     </div>
-  </div>
 
-</section>
+  </section>
 
 
-  
   <!-- 3. ABOUT / PERSONAL INTRODUCTION SECTION -->
   <section id="philosophy" class="shadow-bg text-white py-12 px-6 md:px-16 relative">
 
-    <!-- Section Heading -->
-   <h2 class="text-center text-2xl md:text-3xl font-bold text-white mb-8 tracking-tight"
-    style="font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;">
-  A PASSION FOR UNDERSTANDING PEOPLE & TECHNOLOGY
-</h2>
+    <h2 class="text-center text-2xl md:text-3xl font-bold text-white mb-8 tracking-tight"
+        style="font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;">
+      A PASSION FOR UNDERSTANDING PEOPLE & TECHNOLOGY
+    </h2>
 
     <!-- Introduction Grid -->
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-slate-100">
@@ -318,47 +419,38 @@
         <p class="text-slate-200 leading-relaxed font-light">
           I hope to bring together my background in language, research, and product experience to create technology that is more thoughtful, inclusive, and responsive to people's everyday needs.
         </p>
+      </div>
 
     </div>
   </section>
 
 
- 
+  <!-- 4. I CARE ABOUT PEOPLE SECTION -->
+  <section id="work" class="care-section">
 
-<!-- I CARE ABOUT PEOPLE SECTION -->
+    <h2 class="care-heading">
+      I CARE ABOUT PEOPLE.
+    </h2>
 
-<section id="work" class="care-section">
+    <div class="care-grid">
 
-  <!-- Section Heading -->
-  <h2 class="care-heading">
-    I CARE ABOUT PEOPLE.
-  </h2>
+      <a href="projects.html" class="care-item">
+        <span class="care-number">01 /</span>
+        <h3 class="care-name">OLDER ADULTS</h3>
+      </a>
 
-  <!-- Three Category Items -->
-  <div class="care-grid">
+      <a href="projects.html" class="care-item">
+        <span class="care-number">02 /</span>
+        <h3 class="care-name">UNDERSERVED COMMUNITIES</h3>
+      </a>
 
-    <!-- Category 1: Older Adults -->
-    <a href="projects.html" class="care-item">
-      <span class="care-number">01 /</span>
-      <h3 class="care-name">OLDER ADULTS</h3>
-    </a>
+      <a href="projects.html" class="care-item">
+        <span class="care-number">03 /</span>
+        <h3 class="care-name">WOMEN</h3>
+      </a>
 
-    <!-- Category 2: Underserved Communities -->
-    <a href="projects.html" class="care-item">
-      <span class="care-number">02 /</span>
-      <h3 class="care-name">UNDERSERVED COMMUNITIES</h3>
-    </a>
+    </div>
 
-    <!-- Category 3: Women -->
-    <a href="projects.html" class="care-item">
-      <span class="care-number">03 /</span>
-      <h3 class="care-name">WOMEN</h3>
-    </a>
-
-  </div>
-
-
-    <!-- Small Asterisk Separator -->
     <div class="text-center text-slate-600 mt-16 text-lg">
       *
     </div>
@@ -368,6 +460,7 @@
 
   <!-- 5. FOOTER / GET IN TOUCH SECTION -->
   <footer id="contact" class="py-12 px-6 max-w-4xl mx-auto text-left space-y-4">
+
     <h2 class="text-xl md:text-2xl font-bold text-[#102046] tracking-tight uppercase">
       GET IN TOUCH WITH ME!
     </h2>
@@ -378,18 +471,30 @@
 
     <div class="space-y-2 text-sm text-slate-900 pt-2 font-medium">
       <p>
-        LinkedIn: <a href="https://linkedin.com" target="_blank" class="text-red-600 underline hover:text-red-700">Layla Yan</a>
+        LinkedIn:
+        <a href="https://linkedin.com" target="_blank"
+           class="text-red-600 underline hover:text-red-700">
+          Layla Yan
+        </a>
       </p>
+
       <p>
         Instagram: <span class="text-slate-800">itslayyyylaa</span>
       </p>
+
       <p>
-        Email: <a href="mailto:qiao.xy@foxmail.com" class="text-slate-800 italic underline">qiao.xy@foxmail.com</a>
+        Email:
+        <a href="mailto:qiao.xy@foxmail.com"
+           class="text-slate-800 italic underline">
+          qiao.xy@foxmail.com
+        </a>
       </p>
+
       <p>
         phone number: <span class="text-slate-800">612-461-1808</span>
       </p>
     </div>
+
   </footer>
 
 </body>
