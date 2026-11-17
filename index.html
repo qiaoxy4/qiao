@@ -49,7 +49,7 @@
       letter-spacing: -0.02em;
     }
 
-    .title-layla {
+    .title-QIAO {
       background-color: #ffffff;
       color: #1a1a1a;
       padding: 8px 24px;
@@ -221,13 +221,18 @@
 
   <!-- Centered Photo Frame -->
   <div class="mt-6 mb-8 max-w-sm w-full px-4">
-    <div class="profile-photo-frame mx-auto inline-block">
-      <img
-        src="assets/images/profile.jpeg"
-        alt="Profile Portrait"
-        class="w-72 h-80 object-cover rounded-xl"
-      />
-    </div>
+   <div class="profile-photo-frame mx-auto inline-block mt-8">
+  <img
+    src="assets/images/profile.jpeg"
+    alt="Profile Portrait"
+    class="w-72 h-80 object-cover"
+    style="
+      -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+      filter: grayscale(20%) brightness(0.95);
+    "
+  />
+</div>
   </div>
 
 </section>
