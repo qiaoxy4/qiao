@@ -1,0 +1,586 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Qiao</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #bfd0ed;
+      color: #171717;
+      line-height: 1.65;
+    }
+
+    .about-container {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+      padding: 65px 0 90px;
+    }
+
+    .page-header {
+      margin-bottom: 55px;
+    }
+
+    .page-header h1 {
+      color: #18386f;
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 8px;
+    }
+
+    .page-header p {
+      font-size: 15px;
+      color: #263b5c;
+    }
+
+    .contact-line {
+      margin-top: 12px;
+      font-size: 14px;
+      color: #172b4d;
+    }
+
+    .contact-line a {
+      color: #172b4d;
+      text-decoration: none;
+    }
+
+    .contact-line a:hover {
+      color: #d52d25;
+    }
+
+    .resume-section {
+      margin-bottom: 55px;
+    }
+
+    .section-title {
+      color: #18386f;
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+    }
+
+    .timeline {
+      position: relative;
+      margin-left: 30px;
+      padding-left: 30px;
+      border-left: 3px solid #171717;
+    }
+
+    .timeline-item {
+      position: relative;
+      background: #eeeeee;
+      padding: 25px 30px;
+      margin-bottom: 28px;
+      min-height: 110px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -33px;
+      top: 56px;
+      width: 33px;
+      height: 3px;
+      background: #171717;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 9px;
+    }
+
+    .item-title {
+      color: #18386f;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .item-date {
+      color: #555;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .item-subtitle {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .item-location {
+      color: #666;
+      font-size: 13px;
+      font-weight: 400;
+    }
+
+    .item-description {
+      font-size: 14px;
+      color: #333;
+      margin-top: 8px;
+    }
+
+    .item-description ul {
+      padding-left: 19px;
+      margin-top: 8px;
+    }
+
+    .item-description li {
+      margin-bottom: 8px;
+    }
+
+    .accent {
+      color: #d52d25;
+    }
+
+    .project-card {
+      background: #eeeeee;
+      padding: 25px 30px;
+      margin-bottom: 22px;
+    }
+
+    .project-card h3 {
+      color: #18386f;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .project-meta {
+      color: #777;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .skills-card {
+      background: #eeeeee;
+      padding: 28px 30px;
+    }
+
+    .skill-group {
+      margin-bottom: 20px;
+    }
+
+    .skill-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-group h3 {
+      color: #18386f;
+      font-size: 15px;
+      margin-bottom: 7px;
+      text-transform: uppercase;
+    }
+
+    .skill-group p {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 25px;
+      color: #18386f;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: #d52d25;
+    }
+
+    @media (max-width: 650px) {
+      .about-container {
+        width: 92%;
+        padding-top: 40px;
+      }
+
+      .page-header h1 {
+        font-size: 30px;
+      }
+
+      .section-title {
+        font-size: 24px;
+      }
+
+      .timeline {
+        margin-left: 8px;
+        padding-left: 20px;
+      }
+
+      .timeline-item {
+        padding: 20px;
+      }
+
+      .timeline-item::before {
+        left: -23px;
+        width: 23px;
+      }
+
+      .item-top {
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      .item-date {
+        white-space: normal;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="about-container">
+
+    <!-- PAGE INTRO -->
+    <header class="page-header">
+      <h1>ABOUT ME</h1>
+      <p>Language, research, and human-centered technology.</p>
+
+      <div class="contact-line">
+        Email:
+        <a href="mailto:qiao.xy@foxmail.com">
+          qiao.xy@foxmail.com
+        </a>
+        &nbsp; | &nbsp; China
+      </div>
+    </header>
+
+
+    <!-- EDUCATION -->
+    <section class="resume-section">
+      <h2 class="section-title">Education</h2>
+
+      <div class="timeline">
+
+        <article class="timeline-item">
+          <div class="item-top">
+            <h3 class="item-title">
+              Henan University of Science and Technology
+            </h3>
+            <span class="item-date">September 2020 – June 2024</span>
+          </div>
+
+          <p class="item-subtitle">
+            Bachelor of Arts in English Literature
+          </p>
+
+          <p class="item-description">
+            GPA: 3.4 / 4.0
+            <br>
+            Relevant Coursework: Interpretation Practicum,
+            Internet Applications & Internet+,
+            Advanced Audio-Visual Speaking & Listening,
+            Essentials of Management.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section class="resume-section">
+      <h2 class="section-title">Professional Experience</h2>
+
+      <div class="timeline">
+
+        <!-- FS.COM -->
+        <article class="timeline-item">
+          <div class="item-top">
+            <h3 class="item-title">FS.com</h3>
+            <span class="item-date">June 2024 – August 2026</span>
+          </div>
+
+          <p class="item-subtitle">
+            Mid-Level Product Operator
+            <span class="item-location">
+              | Business Marketing Department · Wuhan, China
+            </span>
+          </p>
+
+          <div class="item-description">
+            <ul>
+              <li>
+                <strong>User & Competitive Research:</strong>
+                Analyzed user feedback and 50+ competing products,
+                producing 15 research reports and identifying an
+                average of 12 optimization opportunities per report.
+              </li>
+
+              <li>
+                <strong>Information Architecture:</strong>
+                Restructured product taxonomies, category navigation,
+                and filtering logic to improve information findability,
+                clarity, and consistency.
+              </li>
+
+              <li>
+                <strong>Interaction Design:</strong>
+                Led prototyping and interaction design for
+                <span class="accent">11 key pages</span>,
+                including homepages, product detail pages,
+                and solution pages. Optimized search, Q&A,
+                and form modules using behavioral data from
+                Google Analytics.
+              </li>
+
+              <li>
+                <strong>Product Launches:</strong>
+                Supported the end-to-end launch of
+                <span class="accent">9 new products</span>.
+              </li>
+
+              <li>
+                <strong>Cross-functional Collaboration:</strong>
+                Worked with product, engineering, design,
+                and marketing teams to translate user needs
+                into actionable design and content standards.
+                Developed standardized SOPs adopted by
+                <span class="accent">200+ users</span>.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+
+        <!-- AIMIX -->
+        <article class="timeline-item">
+          <div class="item-top">
+            <h3 class="item-title">Aimix Group Co., Ltd.</h3>
+          </div>
+
+          <p class="item-subtitle">
+            Web & SEO Intern
+          </p>
+
+          <div class="item-description">
+            <ul>
+              <li>
+                <strong>Web Development & Information Design:</strong>
+                Designed and built 7 web pages using HTML and
+                web layout principles, improving content accessibility
+                and information findability. Achieved 100% Google
+                indexing across the newly developed pages.
+              </li>
+
+              <li>
+                <strong>SEO & Content Strategy:</strong>
+                Developed keyword and content strategies based on
+                user search intent. Published 60+ blog articles
+                and 30+ site-cluster pages, producing over
+                8,500 words of English content.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- RESEARCH EXPERIENCE -->
+    <section class="resume-section">
+      <h2 class="section-title">Research Experience</h2>
+
+      <div class="timeline">
+
+        <article class="timeline-item">
+          <div class="item-top">
+            <h3 class="item-title">
+              Undergraduate Thesis
+            </h3>
+            <span class="item-date">October 2023 – June 2024</span>
+          </div>
+
+          <p class="item-subtitle">
+            An Interpretation of <em>Runaway</em>
+            from a Feminist Perspective
+          </p>
+
+          <p class="item-description">
+            Examined the tension between resistance and return
+            in Alice Munro's <em>Runaway</em>, focusing on the
+            protagonist's decisions, female agency, domestic
+            relationships, and the social constraints shaping
+            her choices.
+          </p>
+        </article>
+
+
+        <article class="timeline-item">
+          <div class="item-top">
+            <h3 class="item-title">
+              Linguistics Research Project
+            </h3>
+          </div>
+
+          <p class="item-subtitle">
+            Interpersonal Bias and Hurt in Family Communication
+          </p>
+
+          <p class="item-description">
+            Conducted interviews with 8 participants and
+            qualitative analysis of online family communication.
+            Examined how short replies, punctuation, delayed
+            responses, and the absence of nonverbal cues can
+            contribute to misunderstandings and emotional hurt
+            in digital conversations.
+          </p>
+        </article>
+
+
+        <article class="timeline-item">
+          <div class="item-top">
+            <h3 class="item-title">
+              Linguistics Research Project
+            </h3>
+          </div>
+
+          <p class="item-subtitle">
+            Emotional Tone and Semantic Understanding
+          </p>
+
+          <p class="item-description">
+            Conducted four rounds of interviews with 8 participants
+            to explore how angry, sarcastic, and friendly tones
+            influence the interpretation of spoken language.
+            Analyzed the relationship between emotional tone,
+            contextual expectations, and meaning-making.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- SELECTED PROJECTS -->
+    <section class="resume-section">
+      <h2 class="section-title">Selected Projects</h2>
+
+      <article class="project-card">
+        <h3>
+          Grocery Self-Pickup Service
+          <span class="accent">| 1st Place in Class</span>
+        </h3>
+
+        <p class="project-meta">
+          Entrepreneurship Project
+        </p>
+
+        <p>
+          Conducted market and user research to understand
+          purchasing behaviors, delivery expectations, and
+          barriers to self-pickup.
+        </p>
+
+        <p>
+          Developed a self-pickup service concept and visual
+          mockups covering product selection, pickup-time
+          selection, and order confirmation, with attention
+          to flexible pickup arrangements.
+        </p>
+      </article>
+
+    </section>
+
+
+    <!-- LEADERSHIP EXPERIENCE -->
+    <section class="resume-section">
+      <h2 class="section-title">Leadership Experience</h2>
+
+      <div class="timeline">
+
+        <article class="timeline-item">
+          <div class="item-top">
+            <h3 class="item-title">
+              Henan University of Science and Technology
+            </h3>
+          </div>
+
+          <p class="item-subtitle">
+            Editorial Team Member
+          </p>
+
+          <p class="item-description">
+            Covered university events and academic activities,
+            conducted interviews, and synthesized information
+            into news content published on the college website
+            and official social media channels.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section class="resume-section">
+      <h2 class="section-title">Skills & Languages</h2>
+
+      <div class="skills-card">
+
+        <div class="skill-group">
+          <h3>Research & Design</h3>
+          <p>
+            Qualitative Research · User Interviews ·
+            Information Architecture · Interaction Design ·
+            Content Structure · Visual Mockups
+          </p>
+        </div>
+
+        <div class="skill-group">
+          <h3>Technical Skills</h3>
+          <p>
+            HTML · CMS · Google Analytics · Excel · VLOOKUP ·
+            PowerPoint · Visual Editing · Video Editing ·
+            Content Creation · ERP · Keyword Tools
+          </p>
+        </div>
+
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <p>
+            Chinese (Native) · English (Fluent) · French (Basic)
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- BACK TO HOME -->
+    <a href="index.html" class="back-link">
+      ← Back to Home
+    </a>
+
+  </main>
+
+</body>
+</html>
